@@ -1,8 +1,8 @@
-# 设计指南 - 智能菜谱规划助手
+# 设计指南 - 晴宝咱吃啥
 
 ## 品牌定位
 
-**应用名称**: 智能菜谱规划助手
+**应用名称**: 晴宝咱吃啥
 **应用定位**: 基于AI的厨房助手，帮助用户自动规划菜谱、生成购物清单、提供备菜和做菜指南
 **设计风格**: 温暖、简洁、高效
 **目标用户**: 家庭主妇/主夫、厨房新手、忙碌的上班族
@@ -10,10 +10,10 @@
 ## 配色方案
 
 ### 主色板
-- **主色**: 暖橙色 `#f97316` → `bg-orange-500` / `text-orange-500`
-  - 寓意：食欲、温暖、活力
-- **辅色**: 温暖绿 `#22c55e` → `bg-green-500` / `text-green-500`
-  - 寓意：健康、新鲜、天然
+- **主色**: 低饱和度蓝绿色 `#0d9488` → `bg-teal-600` / `text-teal-600`
+  - 寓意：清新、自然、健康
+- **辅色**: 柔和暖绿 `#86efac` → `bg-green-300` / `text-green-600`
+  - 寓意：舒适、温馨、活力
 
 ### 中性色
 - **背景色**:
@@ -62,13 +62,13 @@
 ```tsx
 import { Button } from '@/components/ui/button'
 
-// 主按钮 - 橙色
-<Button className="bg-orange-500 text-white hover:bg-orange-600">
+// 主按钮 - 蓝绿色
+<Button className="bg-teal-600 text-white hover:bg-teal-700">
   开始规划
 </Button>
 
-// 次按钮 - 白色带橙色边框
-<Button className="bg-white text-orange-500 border-2 border-orange-500">
+// 次按钮 - 白色带蓝绿色边框
+<Button className="bg-white text-teal-600 border-2 border-teal-600">
   重新规划
 </Button>
 
@@ -124,7 +124,7 @@ import { Input } from '@/components/ui/input'
 **优先使用 `@/components/ui/select` 或 `@/components/ui/radio-group`**
 
 ```tsx
-import { Select, SelectContent, SelectItem, SelectTrigger } from '@/components/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 // 人数选择
 <Select>
@@ -148,7 +148,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger } from '@/components/u
 import { Badge } from '@/components/ui/badge'
 
 // 时间段标签
-<Badge className="bg-orange-100 text-orange-700 px-3 py-1">
+<Badge className="bg-teal-100 text-teal-700 px-3 py-1">
   晚餐
 </Badge>
 
@@ -221,8 +221,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 ### 加载态
 ```tsx
 <View className="flex items-center justify-center py-12">
-  <View className="text-orange-500">
-    <Loader2 className="animate-spin" size={48} />
+  <View className="text-teal-600">
+    <LoaderCircle className="animate-spin" size={48} />
   </View>
   <View className="block text-base text-slate-600 ml-3">
     正在智能规划中...
@@ -252,13 +252,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 **必须使用 `lucide-react-taro`**
 
 ```tsx
-import { Users, Clock, ShoppingCart, ChefHat, Flame, CheckCircle } from 'lucide-react-taro'
+import { Users, Clock, ShoppingCart, ChefHat, Flame, Check } from 'lucide-react-taro'
 
 // 所有图标必须设置 size 和 color
-<Users size={24} color="#f97316" />
+<Users size={24} color="#0d9488" />
 <Clock size={20} color="#64748b" />
 <ShoppingCart size={20} color="#22c55e" />
 <ChefHat size={48} color="#94a3b8" />
-<Flame size={16} color="#f97316" />
-<CheckCircle size={20} color="#22c55e" />
+<Flame size={16} color="#0d9488" />
+<Check size={20} color="#22c55e" />
 ```

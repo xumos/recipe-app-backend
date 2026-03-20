@@ -4,8 +4,8 @@ export default defineAppConfig({
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#f97316',
-    navigationBarTitleText: '智能菜谱规划',
+    navigationBarBackgroundColor: '#0d9488',
+    navigationBarTitleText: '晴宝咱吃啥',
     navigationBarTextStyle: 'white'
   }
 })

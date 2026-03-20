@@ -86,14 +86,14 @@ const IndexPage = () => {
   return (
     <View className="min-h-screen bg-slate-50">
       {/* 顶部标题栏 */}
-      <View className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-6">
+      <View className="bg-gradient-to-r from-teal-600 to-teal-700 px-4 py-6">
         <View className="flex items-center gap-3">
           <ChefHat size={32} color="#ffffff" />
           <View className="flex flex-col">
             <Text className="block text-xl font-bold text-white">
-              智能菜谱规划
+              晴宝咱吃啥
             </Text>
-            <Text className="block text-sm text-orange-100">
+            <Text className="block text-sm text-teal-100">
               AI 助你轻松烹饪
             </Text>
           </View>
@@ -105,7 +105,7 @@ const IndexPage = () => {
         {/* 人数选择 */}
         <View className="mb-4">
           <View className="flex items-center gap-2 mb-3">
-            <Users size={20} color="#f97316" />
+            <Users size={20} color="#0d9488" />
             <Text className="block text-base font-semibold text-slate-800">
               用餐人数
             </Text>
@@ -130,7 +130,7 @@ const IndexPage = () => {
         {/* 时间段选择 */}
         <View>
           <View className="flex items-center gap-2 mb-3">
-            <Clock size={20} color="#f97316" />
+            <Clock size={20} color="#0d9488" />
             <Text className="block text-base font-semibold text-slate-800">
               用餐时间
             </Text>
@@ -141,7 +141,7 @@ const IndexPage = () => {
                 key={option.value}
                 className={`flex flex-col items-center justify-center p-3 rounded-xl cursor-pointer transition-all ${
                   mealTime === option.value
-                    ? 'bg-orange-500 border-2 border-orange-500'
+                    ? 'bg-teal-600 border-2 border-teal-600'
                     : 'bg-slate-50 border-2 border-slate-200'
                 }`}
                 onClick={() => setMealTime(option.value)}
@@ -161,7 +161,7 @@ const IndexPage = () => {
 
         {/* 开始规划按钮 */}
         <Button
-          className="w-full bg-orange-500 text-white mt-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition-colors"
+          className="w-full bg-teal-600 text-white mt-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition-colors"
           onClick={handleGenerateRecipe}
           disabled={loading}
         >
@@ -250,12 +250,12 @@ const IndexPage = () => {
                 </CardHeader>
                 <CardContent className="pt-3 border-t border-slate-100">
                   <Button
-                    className="w-full bg-orange-50 text-orange-600 hover:bg-orange-100 border border-orange-200"
+                    className="w-full bg-teal-50 text-teal-600 hover:bg-teal-100 border border-teal-200"
                     onClick={() => handleShowDishDetail(dish)}
                   >
                     <View className="flex items-center justify-center gap-2">
                       <Text className="block text-sm">查看详细步骤</Text>
-                      <ArrowRight size={16} color="#f97316" />
+                      <ArrowRight size={16} color="#0d9488" />
                     </View>
                   </Button>
                 </CardContent>
@@ -336,7 +336,7 @@ const IndexPage = () => {
               <View className="flex flex-col gap-3">
                 {selectedDish.prepSteps.map((step, index) => (
                   <View key={index} className="flex items-start gap-3">
-                    <View className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <View className="w-6 h-6 rounded-full bg-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Text className="block text-xs font-bold text-white">
                         {index + 1}
                       </Text>
@@ -357,7 +357,7 @@ const IndexPage = () => {
               <View className="flex flex-col gap-3">
                 {selectedDish.cookSteps.map((step, index) => (
                   <View key={index} className="flex items-start gap-3">
-                    <View className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <View className="w-6 h-6 rounded-full bg-teal-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Text className="block text-xs font-bold text-white">
                         {index + 1}
                       </Text>
