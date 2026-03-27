@@ -44,8 +44,9 @@ const IndexPage = () => {
   const handleGenerateRecipe = async () => {
     setLoading(true)
     try {
+      // 使用完整的 URL（微信小程序不支持相对路径）
       const res = await Network.request({
-        url: '/api/recipe/plan',
+        url: 'http://localhost:3000/api/recipe/plan',
         method: 'POST',
         data: {
           peopleCount: parseInt(peopleCount),
