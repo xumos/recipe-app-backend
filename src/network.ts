@@ -8,6 +8,10 @@ import Taro from '@tarojs/taro'
  * IMPORTANT: 项目已经全局注入 PROJECT_DOMAIN
  * IMPORTANT: 除非你需要添加全局参数，如给所有请求加上 header，否则不能修改此文件
  */
+
+// 定义 PROJECT_DOMAIN，从环境变量读取或使用默认值
+const PROJECT_DOMAIN = process.env.PROJECT_DOMAIN || 'http://localhost:3000'
+
 export namespace Network {
     const createUrl = (url: string): string => {
         if (url.startsWith('http://') || url.startsWith('https://')) {
