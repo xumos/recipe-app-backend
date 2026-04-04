@@ -44,9 +44,9 @@ const IndexPage = () => {
   const handleGenerateRecipe = async () => {
     setLoading(true)
     try {
-      // 使用完整的 URL（微信小程序不支持相对路径）
+      // 使用相对路径，Network 会自动添加 PROJECT_DOMAIN
       const res = await Network.request({
-        url: 'http://localhost:3000/api/recipe/plan',
+        url: '/api/recipe/plan',
         method: 'POST',
         data: {
           peopleCount: parseInt(peopleCount),

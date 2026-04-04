@@ -94,15 +94,11 @@
     "vite": "^4.2.0",
     "weapp-tailwindcss": "^4.10.3"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@8.15.9",
   "engines": {
-    "pnpm": ">=9.0.0"
+    "node": ">=18.0.0"
   },
-  "pnpm": {
-    "patchedDependencies": {
-      "@tarojs/plugin-mini-ci@4.1.9": "patches/@tarojs__plugin-mini-ci@4.1.9.patch"
-    }
-  },
+  "pnpm": {},
   "templateInfo": {
     "name": "default",
     "typescript": true,
