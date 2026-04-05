@@ -7,6 +7,7 @@ import Taro from '@tarojs/taro'
  */
 
 // 从环境变量读取域名，使用 Vite 的方式
+// @ts-expect-error - Vite 注入环境变量到 import.meta.env
 const PROJECT_DOMAIN = (import.meta.env as any).PROJECT_DOMAIN || 'http://localhost:3000'
 
 export namespace Network {
