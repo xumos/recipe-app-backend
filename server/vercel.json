@@ -2,9 +2,6 @@
   "version": 2,
   "buildCommand": "cd server && npm install && npm run build",
   "outputDirectory": "server/dist",
-  "functions": {
-    "api/index.js": {}
-  },
   "rewrites": [
     {
       "source": "/(.*)",
