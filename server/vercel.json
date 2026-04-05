@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "buildCommand": "cd server && npm install && npm run build",
+  "outputDirectory": "server/dist",
   "functions": {
     "api/index.js": {
       "runtime": "nodejs20.x"
