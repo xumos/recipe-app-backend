@@ -1,12 +1,19 @@
-{
+﻿{
   "version": 2,
-  "installCommand": "pnpm install --ignore-scripts",
-  "buildCommand": "pnpm --filter server build",
-  "outputDirectory": "server/dist",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
+      "src": "server/dist/api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/dist/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
