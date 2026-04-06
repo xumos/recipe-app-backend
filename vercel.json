@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd server && rm -rf node_modules && npm install --ignore-scripts && npm run build",
+  "buildCommand": "pnpm install --ignore-scripts && pnpm --filter server build",
   "outputDirectory": "server/dist",
   "rewrites": [
     {
