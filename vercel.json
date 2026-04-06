@@ -1,4 +1,5 @@
 {
+  // Vercel 部署配置
   "version": 2,
   "buildCommand": "pnpm install --ignore-scripts && pnpm --filter server build",
   "outputDirectory": "server/dist",
